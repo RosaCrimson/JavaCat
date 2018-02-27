@@ -41,7 +41,7 @@ public class JavaCat extends Application {
   private static final int HUNDRED = 100;
 
   // declare and construct some elements within GUI interface
-  private Image cat = new Image("image/catNormal");
+  private Image cat;
   private Text txFoodLevel = new Text(80, 400, "Food Level: " + foodLevel);
   private Text txIntelligence =
     new Text(80, 450, "Intelligence: " + intelligence);
@@ -66,13 +66,14 @@ public class JavaCat extends Application {
     // create a pane to hold the texts and images.
     Pane pane = new Pane();
     pane.setPadding(new Insets(10, 10, 10, 10));
-    
+    /*
     ImageView background = new ImageView("image/background");
     background.setFitHeight(1024);
     background.setFitWidth(800);
+    cat = new Image("image/catNormal");
     ImageView imageCat = new ImageView(cat);
-    
     pane.getChildren().addAll(background);
+    */
     // create a scene that is 800 px wide and 1024 px high.
     Scene scene = new Scene(pane, 800, 1024);
     primaryStage.setTitle("Java Cat");		// set the stage title
