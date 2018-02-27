@@ -111,35 +111,64 @@ public class JavaCat extends Application {
     }
   }
 
+  /**
+   * pat method: this method will make the intimacy increase if the patcount 
+   * less than or equal to 3, and decrease the intimacy if the patcount number 
+   * greater than 5
+   *
+   */
   public static void pat() {
+    // if the patcount number greater than 5, 
+    // each pat will decrease the intimacy one.
     if (patCount > FIVE) {
       decrement(intimacy);
     }
+    // if the patcount number less than or equal to 5 and greater than 3, 
+    // each pat will not change the intimacy
     else if (patCount > THREE) {
       patCount++;
     }
+    // if the patcount number less than or equal to 3, each pat will 
+    // make the intimacy increase one
     else {
       patCount++;
       increment(intimacy);
     }
+    /each pet will make the foodlevel decrease 5, and count increase one
     foodLevel -= FIVE;
     count++;
   }
 
+  /** 
+   * rebuke method: this method is the will make the intimacy decrease two if 
+   * the rebellion greater than 75, and will make the intimacy ecrease one if 
+   * the rebellion less than or equal to 75
+   *
+   */
   public static void rebuke() {
+    // if the rebellion greater than 75, each rebellion will make the intimacy decrease two
     if (rebellion > SEVENTY_FIVE) {
       decrement(intimacy);
       decrement(intimacy);
     }
+    // if the rebellion less than or equal to 75, each rebellion will make the intimacy 
+    // decrease one
     else {
       decrement(intimacy);
     }
     decrement(rebellion);
+    //each rebuke will make the foodlevel decrease 5, and count increase one 
     foodLevel -= FIVE;
     count++;
   }
 
+  /**
+  * calculateTime method: this method is used to calculate the time in the game
+  *
+  */
   public static String calculateTime() {
+    // if count devided by 3 leaves 0, time is morning; if leaves 1, time is afternoon;
+    // if leaves 2, time is evening. 
     time = count % THREE;
     if (time == 0) {
       return "Morning";
@@ -152,11 +181,19 @@ public class JavaCat extends Application {
     }
   }
 
+  /**
+   * calculateDate method: this method is used to calculate the date in the game 
+   *
+   */
   public static String calculateDate() {
     date = (count / THREE) % TWENTY_EIGHT + 1;
     return  date + "";
   }
 
+  /**
+   * calculateMonth method: this method is used to calculate the month in the game 
+   *
+   */
   public static String calculateMonth() {
     month = (count / THREE) / TWENTY_EIGHT + 1;
     if (month == 1) {
@@ -170,11 +207,20 @@ public class JavaCat extends Application {
     }
   }
 
+  /**
+   * foodLevelPlus method: this metnod is used to return the foodlevel 
+   * of the cat
+   *
+   */
   public static int foodLevelPlus() {
+    // if the foodlevel less than 50, each feed will make the foodlevel 
+    // increase 50
     if (foodLevel < FIFTY) {
       foodLevel += FIFTY;
       return foodLevel;
     }
+    // if the foodlevel greater than 50, each feed will make the foodlevel 
+    // increase 10
     else if (foodLevel > FIFTY) {
       foodLevel += TEN;
       return foodLevel; 
@@ -184,7 +230,11 @@ public class JavaCat extends Application {
       return foodLevel; 
     }
   }
-    
+  
+  /**
+   * life method: if the foodlevel greater than 200 or equal to 0,
+   * cat will return life
+   */
   public static int Life(){
     if (foodLevel > TWOHUNDRED &&
       foodLevel == 0) {
@@ -196,10 +246,15 @@ public class JavaCat extends Application {
     }
   }
   
+ /**
+  * Status method: this method will show the status of the cat
+  */
   public static String Status(){
+    // if the life equals to 0, game will over
     if(life == 0){
       return "Please restart the game";
     }
+    // if the foodlevel greater than 100, cat is full
     else if (foodLevel > 100){
       return "Cat is full";
     }
@@ -207,8 +262,14 @@ public class JavaCat extends Application {
       return "Meow";
     }
   }
-
+  
+  /**
+   * increment method: this method is used to count the variable
+   * if the variable less than 100, each increament will make 
+   * the variable increase 1, and the variable can't greater than 100
+   */
   public static int increment(int variable) {
+   
     if (variable < HUNDRED) {
       variable++;
       return variable;
@@ -217,7 +278,12 @@ public class JavaCat extends Application {
       return variable;
     }
   }
-
+  
+  /**
+   * decreament method: this method is used to count the variable
+   * if the variable greater than 0, each decrement will make variable decrease 1,
+   * and varoable can't less than 0
+   */
   public static int decrement(int variable) {
     if (variable > 0) {
       variable--;
