@@ -114,6 +114,8 @@ public class JavaCat extends Application {
    *
    */
   public static void pat() {
+    // if the patcount number greater than 5, 
+    // each pat will decrease the intimacy one.
     if (patCount > FIVE) {
       decrement(intimacy);
     }
