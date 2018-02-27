@@ -95,7 +95,7 @@ public class JavaCat extends Application {
   
   public class JavaCatInteraction extends WindowController {
     public void onMouseClick(Location point) {
-      if (feed.contains(point.getX(), point.getY)) {
+      if (feed.contains(point.getX(), point.getY())) {
         increment(foodLevel);
         decrement(patCount);
         count++;
@@ -106,7 +106,7 @@ public class JavaCat extends Application {
       if (rebuke.contains(point.getX(), point.getY())) {
         JavaCat.rebuke();
       }
-      if (skip.contains(point.getX(), point.getY())) {
+      if (skip.contains(point.getX(), point.getY())) {
         count++;
         foodLevel -= 5;
       }
