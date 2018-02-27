@@ -67,13 +67,13 @@ public class JavaCat extends Application {
     Pane pane = new Pane();
     pane.setPadding(new Insets(10, 10, 10, 10));
     /*
-    ImageView background = new ImageView("image/background");
-    background.setFitHeight(1024);
-    background.setFitWidth(800);
-    cat = new Image("image/catNormal");
-    ImageView imageCat = new ImageView(cat);
-    pane.getChildren().addAll(background);
-    */
+     * ImageView background = new ImageView("image/background");
+     * background.setFitHeight(1024);
+     * background.setFitWidth(800);
+     * cat = new Image("image/catNormal");
+     *ImageView imageCat = new ImageView(cat);
+     * pane.getChildren().addAll(background);
+     */
     // create a scene that is 800 px wide and 1024 px high.
     Scene scene = new Scene(pane, 800, 1024);
     primaryStage.setTitle("Java Cat");		// set the stage title
