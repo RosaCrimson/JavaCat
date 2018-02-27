@@ -134,7 +134,7 @@ public class JavaCat extends Application {
       patCount++;
       increment(intimacy);
     }
-    /each pet will make the foodlevel decrease 5, and count increase one
+    //each pet will make the foodlevel decrease 5, and count increase one
     foodLevel -= FIVE;
     count++;
   }
