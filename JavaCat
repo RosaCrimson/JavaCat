@@ -1,5 +1,6 @@
 import java.util.*;
 import objectdraw.Controller.*;
+import objectdraw.Location;
 import javafx.application.Application;
 import javafx.geometry.*;
 import javafx.stage.Stage;
@@ -50,6 +51,7 @@ public class JavaCat extends Application {
   private Ellipse feed;
   private Ellipse pat;
   private Ellipse rebuke;
+  private Ellipse skip;
   private Rectangle intimacyLevel = new Rectangle(312, 900, 400, 30);
 
   /**
@@ -106,16 +108,8 @@ public class JavaCat extends Application {
       }
     }
   }
-  
-  /**
-   * pat method: this method will make the intimacy increase if the patcount 
-   * less than or equal to 3, and decrease the intimacy if the patcount number 
-   * greater than 5
-   *
-   */
+
   public static void pat() {
-    // if the patcount number greater than 5, 
-    // each pat will decrease the intimacy one.
     if (patCount > FIVE) {
       decrement(intimacy);
     }
