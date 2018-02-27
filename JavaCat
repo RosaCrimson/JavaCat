@@ -163,9 +163,9 @@ public class JavaCat extends Application {
   }
 
   /**
-  * calculateTime method: this method is used to calculate the time in the game
-  *
-  */
+   * calculateTime method: this method is used to calculate the time in the game
+   *
+   */
   public static String calculateTime() {
     // if count devided by 3 leaves 0, time is morning; if leaves 1, time is afternoon;
     // if leaves 2, time is evening. 
