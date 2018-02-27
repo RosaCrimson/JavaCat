@@ -71,7 +71,7 @@ public class JavaCat extends Application {
      * background.setFitHeight(1024);
      * background.setFitWidth(800);
      * cat = new Image("image/catNormal");
-     *ImageView imageCat = new ImageView(cat);
+     * ImageView imageCat = new ImageView(cat);
      * pane.getChildren().addAll(background);
      */
     // create a scene that is 800 px wide and 1024 px high.
